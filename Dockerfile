@@ -10,9 +10,8 @@ RUN wget https://github.com/Navi-Cloud/Navi-Server/releases/download/20210703035
 RUN wget https://github.com/Navi-Cloud/Navi-Release-Scripts/raw/master/bootstrap.sh -O /working/bootstrap.sh
 RUN wget https://github.com/Navi-Cloud/Navi-Release-Scripts/raw/master/stop_server.sh -O /working/stop_servers.sh
 RUN wget https://github.com/Navi-Cloud/Navi-Release-Scripts/raw/master/update.sh -O /working/update.sh
+RUN wget https://github.com/Navi-Cloud/Navi-Release-Scripts/raw/master/prerun_bootstrap.sh -O /working/prerun_bootstrap.sh
 RUN chmod a+x /working/*.sh
-RUN /working/stop_servers.sh /working/baseServer.jar
-RUN /working/bootstrap.sh 
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
-CMD ["/bin/bash"]
+CMD ["/bin/bash", "/working/prerun_bootstrap.sh"]
