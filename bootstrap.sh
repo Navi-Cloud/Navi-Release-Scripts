@@ -3,17 +3,17 @@
 BASE_FILE=$1 # Base File
 
 # Global New File
-NEW_FILE=/tmp/newServer.jar
+NEW_FILE=/working/newServer.jar
 
 # Metadata for Set one
 SET_ONE_NAME="Navi-Set1"
 SET_ONE_PORT=8080
-SET_ONE_SERVER_FILE=/tmp/SetOne.jar
+SET_ONE_SERVER_FILE=/working/SetOne.jar
 
 # Metadata for Set Two
 SET_TWO_NAME="Navi-Set2"
 SET_TWO_PORT=8081
-SET_TWO_SERVER_FILE=/tmp/SetTwo.jar
+SET_TWO_SERVER_FILE=/working/SetTwo.jar
 
 # ----------------------------------
 # Colors from https://gist.github.com/jonsuh/3c89c004888dfc7352be

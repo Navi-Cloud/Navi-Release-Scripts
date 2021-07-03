@@ -20,26 +20,26 @@ LIGHTPURPLE='\033[1;35m'
 LIGHTCYAN='\033[1;36m'
 WHITE='\033[1;37m'
 
-# Deployed file is located on /tmp/newServer.jar
-# First Replica's file should be on /tmp/SetOne.jar
-# Second Replica's file should be on /tmp/SetTwo.jar
+# Deployed file is located on /working/newServer.jar
+# First Replica's file should be on /working/SetOne.jar
+# Second Replica's file should be on /working/SetTwo.jar
 
 # We need to determine which replica to change.
 
 CURRENT_PROFILE=$(curl -s http://localhost/profile)
 
 # Global New File
-NEW_FILE=/tmp/newServer.jar
+NEW_FILE=/working/newServer.jar
 
 # Metadata for Set one
 SET_ONE_NAME="Navi-Set1"
 SET_ONE_PORT=8080
-SET_ONE_SERVER_FILE=/tmp/SetOne.jar
+SET_ONE_SERVER_FILE=/working/SetOne.jar
 
 # Metadata for Set Two
 SET_TWO_NAME="Navi-Set2"
 SET_TWO_PORT=8081
-SET_TWO_SERVER_FILE=/tmp/SetTwo.jar
+SET_TWO_SERVER_FILE=/working/SetTwo.jar
 
 function tell_verbose {
     TO_TELL=$1

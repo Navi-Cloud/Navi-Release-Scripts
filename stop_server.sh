@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SET_ONE_SERVER_FILE=/tmp/SetOne.jar
-SET_TWO_SERVER_FILE=/tmp/SetTwo.jar
+SET_ONE_SERVER_FILE=/working/SetOne.jar
+SET_TWO_SERVER_FILE=/working/SetTwo.jar
 function stop_server {
     TO_STOP_FILE=$1
     PID_NUMBER=$(pgrep -f $TO_STOP_FILE)
