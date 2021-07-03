@@ -6,7 +6,7 @@ RUN wget https://gist.githubusercontent.com/KangDroid/7de911ad94241243e3b710b651
 RUN echo "set \$service_url http://127.0.0.1:8080;" | tee /etc/nginx/conf.d/service-url.inc
 RUN service nginx restart
 RUN mkdir /working
-RUN wget https://github.com/Navi-Cloud/Navi-Server/releases/download/20210703035957/serverExecutionFile.jar -O /working/baseServer.jar
+RUN wget https://github.com/Navi-Cloud/Navi-Server/releases/download/20210703140555/serverExecutionFile.jar -O /working/baseServer.jar
 RUN wget https://github.com/Navi-Cloud/Server-Updater/releases/download/ALPHA01/NginxUpdater-0.0.1-SNAPSHOT.jar -O /working/updaterServer.jar
 RUN wget https://github.com/Navi-Cloud/Navi-Release-Scripts/raw/master/bootstrap.sh -O /working/bootstrap.sh
 RUN wget https://github.com/Navi-Cloud/Navi-Release-Scripts/raw/master/stop_server.sh -O /working/stop_servers.sh
