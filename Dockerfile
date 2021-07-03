@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN apt update
-RUN apt install -y nginx wget openjdk-16-jdk
+RUN apt install -y nginx wget openjdk-16-jdk curl
 RUN rm -f /etc/nginx/sites-enabled/default
 RUN wget https://gist.githubusercontent.com/KangDroid/7de911ad94241243e3b710b651772583/raw/7cb27fa21a36c39fbbeb6f873f8ebcbba64c0d0e/default -O /etc/nginx/sites-enabled/default
 RUN echo "set \$service_url http://127.0.0.1:8080;" | tee /etc/nginx/conf.d/service-url.inc
