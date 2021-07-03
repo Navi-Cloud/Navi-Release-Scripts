@@ -7,9 +7,9 @@ RUN echo "set \$service_url http://127.0.0.1:8080;" | tee /etc/nginx/conf.d/serv
 RUN service nginx restart
 RUN mkdir /working
 RUN wget https://github.com/Navi-Cloud/Navi-Server/releases/download/20210703035957/serverExecutionFile.jar -O /working/baseServer.jar
-RUN wget https://gist.github.com/KangDroid/cdba977265df4ea3ba822e9b9d5aa1f0/raw/17b5a9310e5cb3ca9ce7379f0aba50807658f06d/bootstrap.sh -O /working/bootstrap.sh
-RUN wget https://gist.github.com/KangDroid/cdba977265df4ea3ba822e9b9d5aa1f0/raw/17b5a9310e5cb3ca9ce7379f0aba50807658f06d/stop_servers.sh -O /working/stop_servers.sh
-RUN wget https://gist.github.com/KangDroid/cdba977265df4ea3ba822e9b9d5aa1f0/raw/17b5a9310e5cb3ca9ce7379f0aba50807658f06d/update.sh -O /working/update.sh
+RUN wget https://github.com/Navi-Cloud/Navi-Release-Scripts/raw/master/bootstrap.sh -O /working/bootstrap.sh
+RUN wget https://github.com/Navi-Cloud/Navi-Release-Scripts/raw/master/stop_server.sh -O /working/stop_servers.sh
+RUN wget https://github.com/Navi-Cloud/Navi-Release-Scripts/raw/master/update.sh -O /working/update.sh
 RUN chmod a+x /working/*.sh
 RUN /working/stop_servers.sh /working/baseServer.jar
 RUN /working/bootstrap.sh 
